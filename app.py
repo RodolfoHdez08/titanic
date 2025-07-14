@@ -5,11 +5,11 @@ import numpy as np
 app = Flask(__name__)
 
 # Cargar modelos y codificadores
-model = pickle.load(open('C:/Users/rodol/OneDrive/Documentos/UTHH/9 CUATRIMESTRE/ExtraccionCBD/p3/proyecto_titanic/final_model.pkl', 'rb'))
-scaler = pickle.load(open('C:/Users/rodol/OneDrive/Documentos/UTHH/9 CUATRIMESTRE/ExtraccionCBD/p3/proyecto_titanic/scaler.pkl', 'rb'))
-le_sex = pickle.load(open('C:/Users/rodol/OneDrive/Documentos/UTHH/9 CUATRIMESTRE/ExtraccionCBD/p3/proyecto_titanic/le_sex.pkl', 'rb'))
-le_cabin = pickle.load(open('C:/Users/rodol/OneDrive/Documentos/UTHH/9 CUATRIMESTRE/ExtraccionCBD/p3/proyecto_titanic/le_cabin.pkl', 'rb'))
-pca = pickle.load(open('C:/Users/rodol/OneDrive/Documentos/UTHH/9 CUATRIMESTRE/ExtraccionCBD/p3/proyecto_titanic/pca.pkl', 'rb'))
+model = pickle.load(open('final_model.pkl', 'rb'))
+scaler = pickle.load(open('scaler.pkl', 'rb'))
+le_sex = pickle.load(open('le_sex.pkl', 'rb'))
+le_cabin = pickle.load(open('le_cabin.pkl', 'rb'))
+pca = pickle.load(open('pca.pkl', 'rb'))
 
 @app.route('/')
 def form():
