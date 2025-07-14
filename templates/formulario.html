@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predicción Titanic</title>
+</head>
+<body>
+    <h2>Formulario - ¿Sobrevivirá?</h2>
+    <form action="/predict" method="post">
+        <label>Pclass:</label>
+        <select name="Pclass">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+        </select><br><br>
+
+        <label>Sexo:</label>
+        <select name="Sex">
+            <option value="male">Hombre</option>
+            <option value="female">Mujer</option>
+        </select><br><br>
+
+        <label>Edad:</label>
+        <input type="number" step="any" name="Age" required><br><br>
+
+        <label>Número de hermanos/esposos a bordo:</label>
+        <input type="number" name="SibSp" required><br><br>
+
+        <label>Número de padres/hijos a bordo:</label>
+        <input type="number" name="Parch" required><br><br>
+
+        <label>Tarifa pagada:</label>
+        <input type="number" step="any" name="Fare" required><br><br>
+
+        <label>Cabin (letra):</label>
+        <input type="text" name="Cabin_letter" maxlength="1" required><br><br>
+
+        <label>Puerto de embarque:</label>
+        <select name="Embarked">
+            <option value="S">S</option>
+            <option value="C">C</option>
+            <option value="Q">Q</option>
+        </select><br><br>
+
+        <input type="submit" value="Predecir">
+    </form>
+
+    {% if prediction %}
+        <h3>Resultado: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
